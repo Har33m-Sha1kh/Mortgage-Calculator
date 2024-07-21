@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Mortgage repayment calculator</title>
+  <link rel="stylesheet" href="./src/styles.css">
+
+</head>
+
+<body class="bg-blue-200 flex justify-center lg:mt-20">
+
+  <div class="flex lg:flex-row flex-col bg-white rounded-xl">
+
+    <form  class='lg:w-80 w-full bg-white lg:rounded-l-xl p-6'>
+      <div class="flex justify-between">
+        <h1 class="font-semibold text-xl">Mortgage Calculator</h1>
+        <input class="underline cursor-pointer " type="reset" value="Clear">
+      </div>
+
+      <div class="my-4">
+        <label class="text-sm text-gray-500 " for="amount">Mortgage Amount:</label>
+        <br>
+        <!-- heres the issue how to resolve this issue of  after pseudo class -->
+        <input
+          class="focus:bg-yellow-100 focus:border-yellow-400 px-2 transition-all outline-none border-[1px] border-gray-200 rounded-md w-full"
+          id="mortage-amount"
+           type="number" required>
+
+      </div>
+
+      <div class="my-4 flex gap-2">
+        <div>
+          <label class="text-sm text-gray-500" for="term">Mortgage Term:</label>
+          <input
+            class="focus:bg-yellow-100 focus:border-yellow-400 transition-all outline-none border-[1px] border-gray-200 rounded-md w-full px-2"
+            id="mortage-term" type="number" required>
+        </div>
+        <div>
+          <label class="text-sm text-gray-500" for="interest">Interest Rate:</label>
+          <input
+            class="focus:bg-yellow-100 focus:border-yellow-400 transition-all outline-none border-[1px] border-gray-200 rounded-md w-full px-2"
+            id="interest-rate" type="number" step="0.01" required>
+        </div>
+
+      </div>
+
+      <div>
+        <label class="text-sm text-gray-500" for="mortage_type">Mortage Type:</label>
+        <div class="p-2 border-gray-300 border-[1px] rounded-md my-2   transition-all">
+          <input style="accent-color: yellow;" class="mx-2" id="repayments" type="radio" name="type" required>Repayment
+        </div>
+        <div class="p-2 border-gray-300 border-[1px] rounded-md my-2  transition-all  ">
+          <input style="accent-color: yellow;" class="mx-2" type="radio" id="interest" name="type" required>Interset
+          Only
+        </div>
+
+      </div>
+
+      <button id="calculate" class="bg-[#d3d038] rounded-xl px-2 m-4 font-semibold">
+        <img class="inline-block" src="assets/images/icon-calculator.svg">
+        Calculate Repayments
+      </button>
+    </form>
+
+
+
+    <div class="results bg-[#14445e] p-4 lg:rounded-r-xl lg:w-80 lg:rounded-bl-3xl pb-14 w-full ">
+
+      <img id="default-result" class="w-full" src="assets/images/illustration-empty.svg" >
+
+      <div class="hidden result">
+        <h2 class="text-white text-lg">Your Results</h2>
+        <p class="text-gray-400 text-sm my-4">
+          Your results are shown based on the information you provided to adjust the results , edit the form and click
+          "calculate repayments" again.
+        </p>
+
+        <div class="bg-[#122f3f]  border-t-4 border-yellow-500 rounded-lg p-2">
+          <h3 class="text-white ">Your monthly repayments</h3>
+          <p id="monthly-payment" class="text-yellow-400 text-4xl py-4">
+            $1,797.74
+          </p>
+          <hr>
+          <br>
+          <h3 class="text-white">Total you will repay over them</h3>
+          <p id="total-repayments" class="text-white font-bold text-xl py-4">
+            $1,797.74
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+
+  <script src="./src/main.js"></script>
+
+</body>
+
+</html>
