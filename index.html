@@ -16,8 +16,8 @@
 <body class="bg-blue-200 flex justify-center lg:mt-20">
 
   <div class="flex lg:flex-row flex-col bg-white rounded-xl">
-
-    <form  class='lg:w-80 w-full bg-white lg:rounded-l-xl p-6'>
+    <!-- form  -->
+    <form class='lg:w-80 w-full bg-white lg:rounded-l-xl p-6'>
       <div class="flex justify-between">
         <h1 class="font-semibold text-xl">Mortgage Calculator</h1>
         <input class="underline cursor-pointer " type="reset" value="Clear">
@@ -25,32 +25,31 @@
 
       <div class="my-4">
         <label class="text-sm text-gray-500 " for="amount">Mortgage Amount:</label>
-         <div id="amount-after" class="relative">
+        <div id="amount-after" class="relative">
           <input
-          class="focus:bg-yellow-100 focus:border-yellow-400 pl-12 transition-all outline-none border-[1px] border-gray-200 rounded-md w-full relative"
-          id="mortage-amount"
-           type="number">
-         </div>
+            class="focus:bg-yellow-100 focus:border-yellow-400 pl-12 transition-all outline-none border-[1px] border-gray-200 rounded-md w-full relative"
+            id="mortage-amount" type="number">
+        </div>
       </div>
 
       <div class="my-4 flex gap-2">
         <div>
           <label class="text-sm text-gray-500" for="term">Mortgage Term:</label>
-         <div id="term-after" class="relative">
-          <input
-          class="focus:bg-yellow-100 focus:border-yellow-400 transition-all outline-none border-[1px] border-gray-200 rounded-md w-full px-2"
-          id="mortage-term" type="number">
-         </div>
-          
+          <div id="term-after" class="relative">
+            <input
+              class="focus:bg-yellow-100 focus:border-yellow-400 transition-all outline-none border-[1px] border-gray-200 rounded-md w-full px-2"
+              id="mortage-term" type="number">
+          </div>
         </div>
+
         <div>
           <label class="text-sm text-gray-500" for="interest">Interest Rate:</label>
           <div id="interest-after" class="relative">
             <input
-            class="focus:bg-yellow-100 focus:border-yellow-400 transition-all outline-none border-[1px] border-gray-200 rounded-md w-full px-2"
-            id="interest-rate" type="number" step="0.01">
+              class="focus:bg-yellow-100 focus:border-yellow-400 transition-all outline-none border-[1px] border-gray-200 rounded-md w-full px-2"
+              id="interest-rate" type="number" step="0.01">
           </div>
-          
+
         </div>
 
       </div>
@@ -75,10 +74,10 @@
     </form>
 
 
-
+   <!-- result display  -->
     <div class="results bg-[#14445e] p-4 lg:rounded-r-xl lg:w-80 lg:rounded-bl-3xl pb-14 w-full ">
 
-      <img id="default-result" class="w-full" src="assets/images/illustration-empty.svg" >
+      <img id="default-result" class="w-full" src="assets/images/illustration-empty.svg">
 
       <div class="hidden result">
         <h2 class="text-white text-lg">Your Results</h2>
@@ -103,13 +102,10 @@
       </div>
 
     </div>
-
-
   </div>
 
 
   <script src="./src/main.js"></script>
-
 </body>
 
 </html>
