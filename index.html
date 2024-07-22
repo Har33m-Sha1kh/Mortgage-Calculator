@@ -29,7 +29,7 @@
         <input
           class="focus:bg-yellow-100 focus:border-yellow-400 px-2 transition-all outline-none border-[1px] border-gray-200 rounded-md w-full"
           id="mortage-amount"
-           type="number" required>
+           type="number">
 
       </div>
 
@@ -38,13 +38,13 @@
           <label class="text-sm text-gray-500" for="term">Mortgage Term:</label>
           <input
             class="focus:bg-yellow-100 focus:border-yellow-400 transition-all outline-none border-[1px] border-gray-200 rounded-md w-full px-2"
-            id="mortage-term" type="number" required>
+            id="mortage-term" type="number">
         </div>
         <div>
           <label class="text-sm text-gray-500" for="interest">Interest Rate:</label>
           <input
             class="focus:bg-yellow-100 focus:border-yellow-400 transition-all outline-none border-[1px] border-gray-200 rounded-md w-full px-2"
-            id="interest-rate" type="number" step="0.01" required>
+            id="interest-rate" type="number" step="0.01">
         </div>
 
       </div>
@@ -52,14 +52,15 @@
       <div>
         <label class="text-sm text-gray-500" for="mortage_type">Mortage Type:</label>
         <div class="p-2 border-gray-300 border-[1px] rounded-md my-2   transition-all">
-          <input style="accent-color: yellow;" class="mx-2" id="repayments" type="radio" name="type" required>Repayment
+          <input style="accent-color: yellow;" class="mx-2" id="repayments" type="radio" name="type">Repayment
         </div>
         <div class="p-2 border-gray-300 border-[1px] rounded-md my-2  transition-all  ">
-          <input style="accent-color: yellow;" class="mx-2" type="radio" id="interest" name="type" required>Interset
+          <input style="accent-color: yellow;" class="mx-2" type="radio" id="interest" name="type">Interset
           Only
         </div>
 
       </div>
+      <div id="error-msg" class="text-red-600 underline font-semibold"></div>
 
       <button id="calculate" class="bg-[#d3d038] rounded-xl px-2 m-4 font-semibold">
         <img class="inline-block" src="assets/images/icon-calculator.svg">
