@@ -10,7 +10,6 @@ const radioButtons = document.querySelectorAll('input[type="radio"]'),
     inputs = document.querySelectorAll("input"),
     error_msg=document.querySelector("#error-msg")
 
-let method = null;
 const formatter = new Intl.NumberFormat('en-US');
 
 
@@ -51,6 +50,7 @@ const check = () => {
 
 
 const mortageCalc = () => {
+    let method =null;
 
     radioButtons.forEach(e => {
         if (e.checked)
