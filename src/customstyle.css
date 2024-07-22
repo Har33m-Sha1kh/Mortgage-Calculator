@@ -1,0 +1,25 @@
+#term-after::after,#interest-after::after,#amount-after::after{
+    position: absolute;
+    top: 0;
+    background-color: rgb(181, 239, 247);
+    height: 100%;
+    padding: 0 1rem;
+}
+
+#amount-after::after{
+    content: "$";
+    left: 0;
+    border-radius: 4px 0 0 4px;
+}
+
+#term-after::after{
+    content: "Years";
+    right: 0;
+    border-radius:0 4px 4px 0;
+}
+
+#interest-after::after{
+    content: "%";
+    right: 0;
+    border-radius:0 4px 4px 0;
+}
